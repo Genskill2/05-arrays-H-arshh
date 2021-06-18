@@ -4,9 +4,8 @@
 /* MAXIMUM */
 int max(int arr[], int n)
  {
-  int i;
   int maximum = arr[0];
-  for(i = 1; i < n; i++) //'n' is the number of elements inside that array//
+  for(int i=1; i<n; i++) 
   {
    if (arr[i] > maximum)
      maximum = arr[i];
@@ -17,9 +16,8 @@ int max(int arr[], int n)
 /* MINIMUM */
 int min(int arr[], int n)
  {
-  int i;
   int minimum = arr[0];
-  for(i = 1; i < n; i++) //'n' is the number of elements inside that array//
+  for(int i=1; i<n; i++) 
   {
    if (arr[i] < minimum)
    minimum = arr[i];
@@ -28,27 +26,29 @@ int min(int arr[], int n)
  }
 
 /* AVERAGE */
-float average( int arr[], int n) //n is the number of elements in the array a//
+float average( int arr[], int n) 
 {
- int sum = 0;
- for (int i = 0; i < n; i++)
+ int sum=0;
+ for (int i=0; i<n; i++)
  {
-  sum += arr[i];
+  sum = sum + arr[i];
  }
- float avg = (float)sum/n;
+ float avg = (float)sum / n;
  return avg;
 }
 
 /* MODE */
 int mode(int arr[], int n) //'n' is the number of elements in the array a\\
 {
- int maxValue = 0, maxCount = 0, i, j;
- for(i = 0; i < n; ++i)
+ int maxValue = 0;
+ int maxCount = 0;
+ int i, j;
+ for(i=0; i<n; ++i)
  {
   int count = 0;
-  for(j = 0; j < n; ++j)
+  for(j=0; j<n; ++j)
   {
-   if(arr[j] == arr[i])
+   if(arr[j]==arr[i])
    ++count;
   }
   if(count > maxCount)
@@ -63,21 +63,21 @@ int mode(int arr[], int n) //'n' is the number of elements in the array a\\
 /* FACTORS */
 int factors(int n, int arr[])
 {
-  int i, j, num, l;
-  int k = 0;
+  int i,j,num,l;
+  int k=0;
   int fac[10];
   int num_pfactors = 0;
-  int m = 0;
-  for(i = 2; i <= n; i++)
+  int m=0;
+  for(i=2; i<=n; i++)
   {
-    int counts = 0;
+    int counts=0;
     if(n%i == 0)
     {
-      for(j = 1; j <= i; j++)
+      for(j=1; j<=i; j++)
       {
         if(i%j == 0)
         {
-          counts ++;
+          counts++;
           num = j;
         }
       }
@@ -89,7 +89,7 @@ int factors(int n, int arr[])
       }
     }
   }
-  for(l = 0; l <= num_pfactors; l++)
+  for(l=0; l<=num_pfactors; l++)
   {
     while(n%fac[l] == 0)
     {
