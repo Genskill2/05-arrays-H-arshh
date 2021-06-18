@@ -91,11 +91,11 @@ int factors(int n, int arr[])
   }
   for(l=0; l<=num_pfactors; l++)
   {
-    while(n%fac[l] == 0)
+    while(n%fact[l] == 0)
     {
-      arr[m] = fac[l];
+      arr[m] = fact[l];
       m++;
-      n = n/fac[l];
+      n = n/fact[l];
     }
   }
   return m;
