@@ -10,8 +10,8 @@ int max(int arr[], int n)
   {
    if (arr[i] > maxm)
      maxm = arr[i];
+  }
    return maxm;
-   }
  }
 
 //test_min//
@@ -22,9 +22,9 @@ int min(int arr[], int n)
   for(i = 1; i < n; i++) //'n' is the number of elements inside that array//
   {
    if (arr[i] < minm)
-     minm = arr[i];
+   minm = arr[i];
+  }
    return minm;
-   }
  }
 
 //test_average//
@@ -34,7 +34,7 @@ float average( int a[], int n) //n is the number of elements in the array a//
  sum = 0;
  for (int i = 0; i < n; i++)
  {
-  sum += a[i]
+  sum += a[i];
  }
  avg = sum/n;
  return avg;
