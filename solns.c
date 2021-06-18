@@ -1,47 +1,46 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
 
-//test_max//
+/* MAXIMUM */
 int max(int arr[], int n)
  {
   int i;
-  int maxm = arr[0]
+  int maximum = arr[0];
   for(i = 1; i < n; i++) //'n' is the number of elements inside that array//
   {
-   if (arr[i] > maxm)
-     maxm = arr[i];
+   if (arr[i] > maximum)
+     maximum = arr[i];
   }
-   return maxm;
+   return maximum;
  }
 
-//test_min//
+/* MINIMUM */
 int min(int arr[], int n)
  {
   int i;
-  int minm = arr[0]
+  int minimum = arr[0];
   for(i = 1; i < n; i++) //'n' is the number of elements inside that array//
   {
-   if (arr[i] < minm)
-   minm = arr[i];
+   if (arr[i] < minimum)
+   minimum = arr[i];
   }
-   return minm;
+   return minimum;
  }
 
-//test_average//
-float average( int a[], int n) //n is the number of elements in the array a//
+/* AVERAGE */
+float average( int arr[], int n) //n is the number of elements in the array a//
 {
- float sum, avg;
- sum = 0;
+ int sum = 0;
  for (int i = 0; i < n; i++)
  {
-  sum += a[i];
+  sum += arr[i];
  }
- avg = sum/n;
+ float avg = (float)sum/n;
  return avg;
 }
 
-//test_mode//
-int mode(int a[], int n) //'n' is the number of elements in the array a\\
+/* MODE */
+int mode(int arr[], int n) //'n' is the number of elements in the array a\\
 {
  int maxValue = 0, maxCount = 0, i, j;
  for(i = 0; i < n; ++i)
@@ -49,19 +48,19 @@ int mode(int a[], int n) //'n' is the number of elements in the array a\\
   int count = 0;
   for(j = 0; j < n; ++j)
   {
-   if(a[j] == a[i])
+   if(arr[j] == arr[i])
    ++count;
   }
   if(count > maxCount)
   {
    maxCount = count;
-   maxValue = a[i];
+   maxValue = arr[i];
   }
  }
  return maxValue;
 }
 
-//test_factor//
+/* FACTORS */
 int factors(int n, int arr[])
 {
   int i, j, num, l;
